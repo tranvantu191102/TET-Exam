@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="header">
+          <div class="header__left">
+            <div class="header__icon">
+              <i class="fa-solid fa-list"></i>
+            </div>
+            <h2 class="header__title">To Do List</h2>
+          </div>
+          <div class="header__right">
+            <div
+              onclick="handleSortTask(0)"
+              class="btn btn-sort btn-all active"
+            >
+              All
+            </div>
+            <div onclick="handleSortTask(1)" class="btn btn-sort btn-done">
+              Done
+            </div>
+            <div onclick="handleSortTask(2)" class="btn btn-sort btn-undone">
+              Undone
+            </div>
+          </div>
+        </div>
+        <form class="form">
+          <input type="text" class="form-input" placeholder="Add a new task" />
+          <button type="submit" class="btn-add">ADD</button>
+        </form>
+        <ul class="list-task">
+          <!-- <li class="task-item done">
+            <div class="task-item__title">
+              <p>Doing homework</p>
+            </div>
+            <div class="task-item__action">
+              <div class="delete"><i class="fa-solid fa-trash"></i></div>
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+            </div>
+          </li> -->
+        </ul>
+      </main>
+      <div class="toast">
+        <!-- <div class="toast-item">
+          <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="toast-message">Edit Successfully</div>
+          <div class="toast-delete"><i class="fa-solid fa-x"></i></div>
+        </div> -->
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
